@@ -34,7 +34,7 @@ try:
             else:
                 print("Pasta não contem fichas, precione qualquer tecla e adicione fichas em "+"\""+fichas_path+"\"")
                 input("")
-                os.exit()
+                exit()
         else:
             print("\nCaminho não encontrado, precione qualquer tecla e abra novamente o programa para informar um "
                   "novo caminho\n")
