@@ -1,5 +1,6 @@
 import os
 import glob
+import sys
 from os import path
 from os.path import exists as file_exists
 
@@ -34,13 +35,13 @@ try:
             else:
                 print("Pasta não contem fichas, precione qualquer tecla e adicione fichas em "+"\""+fichas_path+"\"")
                 input("")
-                exit()
+                sys.exit()
         else:
             print("\nCaminho não encontrado, precione qualquer tecla e abra novamente o programa para informar um "
                   "novo caminho\n")
             input()
             os.remove(nome_arquivo_caminho)
-            exit()
+            sys.exit()
     else:
         fichas_path = str(input("Digite o caminho da pasta com as fichas:"))
         if path.exists(fichas_path):
@@ -52,15 +53,15 @@ try:
             else:
                 print("Pasta não contem fichas, precione qualquer tecla e adicione fichas em "+"\""+fichas_path+"\"")
                 input("")
-                exit()
+                sys.exit()
         else:
             print("\nCaminho:" + "\"" + fichas_path + "\" não encontrado")
             press_any()
-            exit()
+            sys.exit()
 except OSError:
     print("\nErro ao tentar usar ou modificar o caminho da pasta")
     press_any()
-    exit()
+    sys.exit()
 
 
 stats = [-1, -1, -1, -1, -1]
@@ -89,7 +90,7 @@ while escolha != 0:
         try:
             escolha = int(input())
             if escolha == 0:
-                exit()
+                sys.exit()
         except ValueError:
             pass
 
