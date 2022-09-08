@@ -68,17 +68,15 @@ aux = [-1, -1, -1, -1, -1]
 transformacoes = [[1, 1, 1, 1, 1]]
 transformacoes_nomes = ["Base"]
 
-stat_index = 0
-file_index = 0
-transformation_index = 1
-
 for i in range(10000):
     transformacoes.append([0, 0, 0, 0, 0])
     transformacoes_nomes.append([])
 
 escolha = -1
 while escolha != 0:
+    stat_index = 0
     file_index = 0
+    transformation_index = 1
     os.system('cls')
     print("Escolha a ficha")
     print("\n[0]Sair do programa")
