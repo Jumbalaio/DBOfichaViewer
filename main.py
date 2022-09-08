@@ -21,7 +21,7 @@ def get_fichas(fichas_path_2):
 
 fichas_path = ""
 fichas = []
-nome_arquivo_caminho = "path.achomeupaugrande"
+nome_arquivo_caminho = "path.pauloguina"
 try:
     if file_exists(nome_arquivo_caminho):
         f = open(nome_arquivo_caminho, "r")
