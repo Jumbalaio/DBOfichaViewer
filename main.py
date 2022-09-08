@@ -133,4 +133,6 @@ while escolha != 0:
         print("Inteligencia:" + str(inteligencia))
         print("Espirito:" + str(espirito))
 
+    print("---------------------------------------------------------------")
     press_any()
+
