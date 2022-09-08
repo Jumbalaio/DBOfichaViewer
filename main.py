@@ -78,6 +78,7 @@ for i in range(10000):
 
 escolha = -1
 while escolha != 0:
+    file_index = 0
     os.system('cls')
     print("Escolha a ficha")
     print("\n[0]Sair do programa")
