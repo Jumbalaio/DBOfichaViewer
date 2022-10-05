@@ -1,0 +1,13 @@
+Nome:paucuceta
+
+?Nivel:2
+
+$Força:690000
+$Destreza:600009
+$Resistencia:690000
+$Inteligencia:69000
+$Espirito:69000
+
+
+@Soco/Chute:f,0£(f*D)
+@Explosao:i,100£100* 4
