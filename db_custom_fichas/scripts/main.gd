@@ -124,14 +124,14 @@ func update_stats_novo(index):
 	var poder_de_luta = get_node("panel_" + str(ativa + 1) + "/icon_anchor/power_level_" + str(ativa))
 	poder_de_luta.text = "PDL:" + str(Global.power_level_constructor(ficha[ativa]))
 	
-	ficha[ativa].vida[0] = ficha[ativa].stat.multiplicado[2] * 50
-	ficha[ativa].vida[1] = ficha[ativa].vida[0]
+	ficha[ativa].hp[0] = ficha[ativa].stat.multiplicado[2] * 50
+	ficha[ativa].hp[1] = ficha[ativa].hp[0]
 	ficha[ativa].ki[0] = ficha[ativa].stat.multiplicado[4] * 50
 	ficha[ativa].ki[1] = ficha[ativa].ki[0]
 
-	life_bar.max_value = ficha[ativa].vida[0]
-	life_bar.value = ficha[ativa].vida[1]
-	life_text.text = "Vida:" + str(ficha[ativa].vida[0]) + "/" + str(ficha[ativa].vida[1])
+	life_bar.max_value = ficha[ativa].hp[0]
+	life_bar.value = ficha[ativa].hp[1]
+	life_text.text = "hp:" + str(ficha[ativa].hp[0]) + "/" + str(ficha[ativa].hp[1])
 	
 	ki_bar.max_value = ficha[ativa].ki[0]
 	ki_bar.value = ficha[ativa].ki[1]
@@ -277,11 +277,11 @@ func calculate_attack(other_sheet):
 		final_formula_text += formula_constructor(i)
 		
 	formula.text = final_formula_text
-	result.text = ficha[other_sheet].nome + " falhou em" + frase[1] + "(" + str(def_roll) + "+" + str(ficha[other_sheet].stat.modificador[1]) + "), " + ficha[ativa].nome + " acertou(" + str(atk_roll) + "+" + str(ficha[ativa].stat.modificador[mod_index]) + "), tirando " + str(damage_delt) + " de vida"
+	result.text = ficha[other_sheet].nome + " falhou em" + frase[1] + "(" + str(def_roll) + "+" + str(ficha[other_sheet].stat.modificador[1]) + "), " + ficha[ativa].nome + " acertou(" + str(atk_roll) + "+" + str(ficha[ativa].stat.modificador[mod_index]) + "), tirando " + str(damage_delt) + " de hp"
 	
-	ficha[other_sheet].vida[1] -= damage_delt
-	life.text = "Vida:" + str(ficha[other_sheet].vida[0]) + "/" + str(ficha[other_sheet].vida[1])
-	life_bar.value = ficha[other_sheet].vida[1]
+	ficha[other_sheet].hp[1] -= damage_delt
+	life.text = "hp:" + str(ficha[other_sheet].hp[0]) + "/" + str(ficha[other_sheet].hp[1])
+	life_bar.value = ficha[other_sheet].hp[1]
 
 # Procura termos e os substitui para criar uma formula mais legivel #
 func formula_constructor(letter):
@@ -317,9 +317,9 @@ func reset_life(index):
 	var life = get_node("life_" + str(index))
 	var ki = get_node("ki_" + str(index)) 
 	
-	ficha[index].vida[1] = ficha[index].vida[0]
-	life.text = "Vida:" + str(ficha[index].vida[0]) + "/" + str(ficha[index].vida[1])
-	life_bar.value = ficha[index].vida[1]
+	ficha[index].hp[1] = ficha[index].hp[0]
+	life.text = "hp:" + str(ficha[index].hp[0]) + "/" + str(ficha[index].hp[1])
+	life_bar.value = ficha[index].hp[1]
 	
 	ficha[index].ki[1] = ficha[index].ki[0]
 	ki.text = "Ki:" + str(ficha[index].ki[0]) + "/" + str(ficha[index].ki[1])
@@ -364,13 +364,13 @@ func _on_scan_folder_pressed():
 	selected[1] = 0
 
 func _on_life_change_1_pressed():
-	popup.window_title = "Cetar vida de " + ficha[0].nome
+	popup.window_title = "Cetar hp de " + ficha[0].nome
 	popup.rect_position = box_position.position
 	ativa = 0
 	popup.show()
 
 func _on_life_change_2_pressed():
-	popup.window_title = "Cetar vida de " + ficha[1].nome
+	popup.window_title = "Cetar hp de " + ficha[1].nome
 	popup.rect_position = box_position.position
 	ativa = 1
 	popup.show()
@@ -379,9 +379,9 @@ func _on_ConfirmationDialog_1_confirmed():
 	if edit_life.text.is_valid_integer():
 		var life_bar = get_node("life_bar_" + str(ativa))
 		var life = get_node("life_" + str(ativa))
-		ficha[ativa].vida[1] = int(edit_life.text)
+		ficha[ativa].hp[1] = int(edit_life.text)
 		life.text = life.text.split("/")[0] + ("/" + edit_life.text)
-		life_bar.value = int(ficha[ativa].vida[1])
+		life_bar.value = int(ficha[ativa].hp[1])
 
 func _on_skill_box_1_item_selected(index):
 	em_uso[0] = index
