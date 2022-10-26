@@ -1,0 +1,46 @@
+{
+"alinhamento": "-",
+"altura": 2.0,
+"ataque": [ {
+"ataque_de_ki": false,
+"custo": 0,
+"formula": "(f*D)",
+"nome": "Soco/Chute",
+"stat": 0
+}, {
+"ataque_de_ki": false,
+"custo": "10",
+"formula": "(69 * r) + f",
+"nome": "Dar o cu",
+"stat": 2
+} ],
+"dano_de_nivel": 2,
+"descricao": "Esse é o bicho piruleta sem as zorba.
+aham",
+"hp": [ 350, 350 ],
+"idade": 19,
+"imagem_url": "C:/Users/CPU/Desktop/db_custom_fichas/images/download.png",
+"inventario": [ {
+"item_nome": "Pau",
+"item_quant": "5"
+}, {
+"item_nome": "Esfera do dragão",
+"item_quant": "2"
+} ],
+"ki": [ 900, 900 ],
+"nivel": 5,
+"nome": "Bicho Piruleta",
+"stat": {
+"modificador": [ 1, 0, 2, 0, 6 ],
+"multiplicado": [ 5, 2, 7, 2, 18 ],
+"normal": [ 5, 2, 7, 2, 18 ]
+},
+"transformacao": [ {
+"multiplicador": [ 1, 1, 1, 1, 1 ],
+"nome": "Base"
+}, {
+"multiplicador": [ 2, 2, 2, 2, 2 ],
+"nome": "Kaioken"
+} ],
+"zeni": 5400
+}

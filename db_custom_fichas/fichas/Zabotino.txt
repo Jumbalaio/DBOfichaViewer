@@ -1,0 +1,13 @@
+Nome:Zabotino
+
+?Nível:10
+
+$Forca:20
+$Destreza:12
+$Resistencia:10
+$Inteligencia:4
+$Espirito:10
+
+@Oozaru:[10,1,10,1,10]
+
+#Kamehameha:e,1000£(2*D)+e
