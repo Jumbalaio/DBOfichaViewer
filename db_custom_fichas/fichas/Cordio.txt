@@ -1,0 +1,31 @@
+{
+"alinhamento": "Lawful/Evil",
+"altura": "",
+"ataque": [ {
+"ataque_de_ki": false,
+"custo": 0,
+"formula": "(f*D)",
+"nome": "Soco/Chute",
+"stat": 0
+} ],
+"dano_de_nivel": 4,
+"descricao": "",
+"favorito": false,
+"hp": [ 300, 300 ],
+"idade": 20,
+"imagem_url": "res://images/unknown.png",
+"inventario": [  ],
+"ki": [ 200, 200 ],
+"nivel": 3,
+"nome": "Cordio",
+"stat": {
+"modificador": [ 1, 0, 2, 0, 1 ],
+"multiplicado": [ 5, 2, 6, 1, 4 ],
+"normal": [ 5, 2, 6, 1, 4 ]
+},
+"transformacao": [ {
+"multiplicador": [ 1, 1, 1, 1, 1 ],
+"nome": "Base"
+} ],
+"zeni": ""
+}
