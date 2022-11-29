@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/console.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="console_box" type="TextEdit" parent="."]
+visible = false
+margin_left = 8.0
+margin_top = 40.0
+margin_right = 232.0
+margin_bottom = 208.0
+focus_mode = 0
+readonly = true
+
+[node name="console_edit" type="LineEdit" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 1016.0
+margin_bottom = 32.0
+
+[connection signal="text_entered" from="console_edit" to="." method="_on_console_edit_text_entered"]

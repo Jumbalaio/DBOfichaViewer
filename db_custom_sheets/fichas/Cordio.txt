@@ -1,0 +1,55 @@
+{
+"alinhamento": "Neutral/Good",
+"altura": "",
+"ataque": [ {
+"ataque_de_ki": false,
+"custo": 0,
+"custo_2": 0,
+"formula": "(for*DIF)",
+"lados_consecutivo": 2,
+"nome": "Soco/Chute",
+"quantidade_de_hits": 1,
+"stat": 0
+}, {
+"ataque_de_ki": false,
+"custo": "20",
+"custo_2": "5",
+"formula": "(esp*DN)+DIF",
+"lados_consecutivo": "10",
+"nome": "Ki Blast Barrage",
+"quantidade_de_hits": "6",
+"stat": 4
+} ],
+"dano_de_nivel": 5,
+"descricao": "Um cara verde.",
+"favorito": false,
+"hp": [ 300, 300 ],
+"idade": 5,
+"imagem_url": "res://images/download.jpg",
+"inventario": [ {
+"item_nome": "ceta",
+"item_quant": "6"
+} ],
+"ki": [ 200, 200 ],
+"nivel": 1,
+"nome": "Cordio",
+"nv": 3,
+"st": [ 125, 125 ],
+"stat": {
+"carisma": 2,
+"carisma_modificador": 0,
+"modificador": [ 1, 0, 2, 0, 1 ],
+"multiplicado": [ 5, 2, 6, 1, 4 ],
+"normal": [ 5, 2, 6, 1, 4 ]
+},
+"transformacao": [ {
+"multiplicador": [ 1, 1, 1, 1, 1 ],
+"nome": "Base",
+"operador": [ "*", "*", "*", "*", "*" ]
+}, {
+"multiplicador": [ 2, 2, 2, 2, 2 ],
+"nome": "Kaioken",
+"operador": [ "*", "*", "*", "*", "*" ]
+} ],
+"zeni": 3
+}
